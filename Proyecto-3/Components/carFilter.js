@@ -1,7 +1,5 @@
 const URL = "https://proyecto-2-horus.herokuapp.com/api/ApiCar/Marca?api_token=jR3EBxetz5JKvVfPKyCDdCb38ymjHTzUJhAZTkSCOgK5FLlqYZ8x8UlCz1RR&Marca=";
 const ALL_URL = "https://proyecto-2-horus.herokuapp.com/api/ApiCar?api_token=jR3EBxetz5JKvVfPKyCDdCb38ymjHTzUJhAZTkSCOgK5FLlqYZ8x8UlCz1RR";
-//const URL = "http://127.0.0.1:8000/api/ApiCar/Marca?api_token=jR3EBxetz5JKvVfPKyCDdCb38ymjHTzUJhAZTkSCOgK5FLlqYZ8x8UlCz1RR&Marca=";
-//const ALL_URL = "http://127.0.0.1:8000/api/ApiCar?api_token=jR3EBxetz5JKvVfPKyCDdCb38ymjHTzUJhAZTkSCOgK5FLlqYZ8x8UlCz1RR";
 
 Vue.component('carfilter', {
     template: `
@@ -41,7 +39,7 @@ Vue.component('carfilter', {
         </div>
         <div class= "row">
             <div class="col-3  "></div>
-            <div class="col-6  text-center my-4"><sortfilter v-on:sort = "sortCars($event)" ></sortfilter></div>
+            <div class="col-6  text-center my-4"><sortfilter v-on:sort = "sortCars($event,$event)" ></sortfilter></div>
             <div class="col-3  "></div>
         </div>
     </div>
@@ -95,27 +93,15 @@ Vue.component('carfilter', {
                 }
             }
         },
-        sortCars: function (type){
-            switch(type){
-                case "Max Price":
-                    this.carsToShowFiltered.sort(function(a,b){return b.precio - a.precio});
-                    break;
-                case "Min Price":
-                    this.carsToShowFiltered.sort(function(a,b){return a.precio - b.precio});
-                    break;
-                case "Max Km":
-                    this.carsToShowFiltered.sort(function(a,b){return b.kilometros - a.kilometros});
-                    break;
-                case "Min Km":
-                    this.carsToShowFiltered.sort(function(a,b){return a.kilometros - b.kilometros});
-                    break;
-                case "Max Year":                   
-                    this.carsToShowFiltered.sort(function(a,b){return b.anio - a.anio});
-                    break;
-                case "Min Year":                 
-                    this.carsToShowFiltered.sort(function(a,b){return a.anio - b.anio});
-                    break;    
-                
+        sortCars: function (sorter){
+            howToSort = sorter.howToSort;
+            if(howToSort === 'Greater'){
+                this.carsToShowFiltered = sorter.sortGreater(this.carsToShowFiltered);
+            }
+            else{
+                if(howToSort === "Lower"){
+                    this.carsToShowFiltered = sorter.sortLower(this.carsToShowFiltered);
+                }
             }
         }
     }

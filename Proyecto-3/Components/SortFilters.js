@@ -8,8 +8,8 @@ Vue.component('sortfilter',{
                     {{year}}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" @click = "changeYear('Max Year')">Max Year</a>
-                    <a class="dropdown-item" href="#" @click = "changeYear('Min Year')">Min Year</a>
+                    <a class="dropdown-item" href="#" @click = "changeYear('Max Year','Greater')">Max Year</a>
+                    <a class="dropdown-item" href="#" @click = "changeYear('Min Year','Lower')">Min Year</a>
                 </div>
             </div>
             <div class="dropdown ">
@@ -17,8 +17,8 @@ Vue.component('sortfilter',{
                     {{km}}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" @click = "changeKm('Max Km')" >Max Km</a>
-                    <a class="dropdown-item" href="#"  @click = "changeKm('Min Km')" >Min Km</a>
+                    <a class="dropdown-item" href="#" @click = "changeKm('Max Km','Greater')" >Max Km</a>
+                    <a class="dropdown-item" href="#"  @click = "changeKm('Min Km','Lower')" >Min Km</a>
                 </div>
             </div>
             <div class="dropdown ">
@@ -26,8 +26,8 @@ Vue.component('sortfilter',{
                     {{price}}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" @click = "changePrice('Max Price')">Max Price</a>
-                    <a class="dropdown-item" href="#" @click = "changePrice('Min Price')">Min Price</a>
+                    <a class="dropdown-item" href="#" @click = "changePrice('Max Price','Greater')">Max Price</a>
+                    <a class="dropdown-item" href="#" @click = "changePrice('Min Price','Lower')">Min Price</a>
                 </div>
             </div>
             </div>
@@ -43,22 +43,25 @@ Vue.component('sortfilter',{
         }
     },
     methods: {
-        changeYear(sortType) {
+        changeYear(sortType,howToSort) {
             this.reset();
             this.year = sortType;
-            this.$emit('sort',sortType);
+            var sortStrategy = new YearStrategy(howToSort)
+            this.$emit('sort',sortStrategy);
 
         },
-        changeKm(sortType) {
+        changeKm(sortType,howToSort) {
             this.reset();
             this.km = sortType;
-            this.$emit('sort',sortType);
+            var sortStrategy = new KmStrategy(howToSort)
+            this.$emit('sort',sortStrategy);
         },
         
-        changePrice(sortType) {
+        changePrice(sortType,howToSort) {
             this.reset();
             this.price = sortType;
-            this.$emit('sort',sortType);
+            var sortStrategy = new PriceStrategy(howToSort)
+            this.$emit('sort',sortStrategy);
 
         },
         reset(){
@@ -69,4 +72,4 @@ Vue.component('sortfilter',{
     }
 });
 
- 
+

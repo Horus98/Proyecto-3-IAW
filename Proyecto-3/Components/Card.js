@@ -1,7 +1,7 @@
 Vue.component('Card',{
     template: `
     
-    <div class="col-sm-4 ">
+    <div class="col-xs-12 col-md-6 col-lg-4">
     <div class="card ml-1 mt-3" style="width: 20rem; height: 25rem;">
     <a @click = "imageSelected = ''; 
         imageSelected = car.imagen; change()"  change data-toggle="modal" data-target="#exampleModal" 

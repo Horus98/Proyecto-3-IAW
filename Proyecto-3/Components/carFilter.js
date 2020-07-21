@@ -10,14 +10,14 @@ Vue.component('carfilter', {
         </div>
         <div class="row">
             <div class="col-2"></div>
-            <div class="col-4 mt-3">
+            <div class="col-4 col-xs-6 mt-3">
                 <select class="form-control" v-model="selected" v-on:change="updateModels"  id="exampleFormControlSelect2">
                     <option disabled value="" selected>Select your brand</option>   
                     <option value="All"> All </option> 
                     <option v-for="car of cars" :value= "car[0].marca" >{{car[0].marca}}</option>
                 </select>
             </div>
-            <div class="col-4 mt-3">
+            <div class="col-4 col-xs-6 mt-3">
                 <select class="form-control" v-model="selectedModel"  id="exampleFormControlSelect2">
                 <option disabled value="" selected >Select your model</option>
                 <option value="All"> All </option>

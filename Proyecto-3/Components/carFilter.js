@@ -6,7 +6,7 @@ Vue.component('carfilter', {
     <div class="container mt-3">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h4 class=" text-center">Searcher </h4>
+            <h4 class=" text-center">Choose your dream car from home </h4>
         </div>
         <div class="row">
             <div class="col-2"></div>

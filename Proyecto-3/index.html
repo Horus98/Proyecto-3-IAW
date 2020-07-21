@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+    <title>Componentes</title>
+</head>
+
+<body>
+    <div id="app2">
+        <nav class="navbar navbar-grey bg-grey" style="background-color:#1c1e22;"> 
+            <a class="navbar-brand">
+              <img src="/Proyecto-3/Images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="icon">
+              Cars.com
+            </a>
+          
+          </nav>
+        <carfilter :cars="cars"></carfilter>
+        <imageviewer v-bind:image ="image"></imageviewer>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="Components/Strategy.js"></script>
+<script src="Components/SortFilters.js"></script>
+<script src="Components/ImageViewer.js"></script>
+<script src="Components/carFilter.js"></script>
+<script src="Components/Card.js"></script>
+<script src="app2.js"></script>
+
+</html>

@@ -11,14 +11,16 @@
 
 <body>
     <div id="app2">
-        <nav class="navbar navbar-grey bg-grey" style="background-color:#1c1e22;"> 
+        <nav class="navbar navbar-grey bg-grey" style="background-color:#1c1e22;">
             <a class="navbar-brand">
-              <img src="Images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="icon">
-              Cars.com
+                <img src="Images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="icon">
+                Cars.com
             </a>
-          </nav>
-        <carfilter :cars="cars"></carfilter>
-        <imageviewer v-bind:image ="image"></imageviewer>
+        </nav>
+        <div class="container">
+            <carfilter :cars="cars"></carfilter>
+            <imageviewer v-bind:image="image"></imageviewer>
+        </div>
     </div>
 </body>
 

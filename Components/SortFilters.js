@@ -1,7 +1,7 @@
 Vue.component('sortfilter',{
     template: `
     <div class= "row">
-        <div class= "col-12">
+        <div class= "col-sm-12">
         <div class="btn-group">
             <div class="dropdown ">
                 <button class="btn btn-warning dropdown-toggle btn-sm" type="button" id="dropYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

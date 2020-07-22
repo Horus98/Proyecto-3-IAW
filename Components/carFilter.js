@@ -38,12 +38,12 @@ Vue.component('carfilter', {
                 </div>
         </div>
         <div class= "row">
-            <div class="col-3  "></div>
-            <div class="col-6  text-center my-4"><sortfilter v-on:sort = "sortCars($event,$event)" ></sortfilter></div>
-            <div class="col-3  "></div>
+            <div class="col-lg-3  "></div>
+            <div class="col-lg-6  col-sm-12 text-center my-4"><sortfilter v-on:sort = "sortCars($event,$event)" ></sortfilter></div>
+            <div class="col-lg-3  "></div>
         </div>
     </div>
-    <div class="row " >
+    <div class="row align-items-start" >
         <Card v-for="car of carsToShowFiltered" :car="car" :key= "car.id" ></Card> 
     </div>
     </div>

@@ -4,30 +4,30 @@ Vue.component('sortfilter',{
         <div class= "col-sm-12">
         <div class="btn-group">
             <div class="dropdown ">
-                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" id="dropYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-default dropdown-toggle btn-sm" type="button" id="dropYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{year}}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" @click = "changeYear('Max Year','Greater')">Max Year</a>
-                    <a class="dropdown-item" href="#" @click = "changeYear('Min Year','Lower')">Min Year</a>
+                    <a class="dropdown-item"  @click = "changeYear('Max Year','Greater')">Max Year</a>
+                    <a class="dropdown-item"  @click = "changeYear('Min Year','Lower')">Min Year</a>
                 </div>
             </div>
             <div class="dropdown ">
-                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" id="dropKm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-default dropdown-toggle btn-sm" type="button" id="dropKm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{km}}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" @click = "changeKm('Max Km','Greater')" >Max Km</a>
-                    <a class="dropdown-item" href="#"  @click = "changeKm('Min Km','Lower')" >Min Km</a>
+                    <a class="dropdown-item"  @click = "changeKm('Max Km','Greater')" >Max Km</a>
+                    <a class="dropdown-item"   @click = "changeKm('Min Km','Lower')" >Min Km</a>
                 </div>
             </div>
             <div class="dropdown ">
-                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" id="dropPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-default dropdown-toggle btn-sm" type="button" id="dropPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{price}}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" @click = "changePrice('Max Price','Greater')">Max Price</a>
-                    <a class="dropdown-item" href="#" @click = "changePrice('Min Price','Lower')">Min Price</a>
+                    <a class="dropdown-item"  @click = "changePrice('Max Price','Greater')">Max Price</a>
+                    <a class="dropdown-item"  @click = "changePrice('Min Price','Lower')">Min Price</a>
                 </div>
             </div>
             </div>

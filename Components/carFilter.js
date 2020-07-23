@@ -31,10 +31,10 @@ Vue.component('carfilter', {
             <div class="col-2"></div>
             <div class="col-8">
                 <div v-if="selectedModel === ''">
-                    <button disabled class="btn btn-warning btn-md mt-4 btn-block" @click=showCars>Search</button>
+                    <button disabled class="btn btn-Deep-purple accent-4 btn-md mt-4 btn-block" @click=showCars>Search</button>
                 </div>
                 <div v-else>
-                    <button class="btn btn-warning btn-md mt-4 btn-block" @click=showCars>Search</button>
+                    <button class="btn btn-Deep-purple accent-4 btn-md mt-4 btn-block" @click=showCars>Search</button>
                 </div>
             </div>
         </div>

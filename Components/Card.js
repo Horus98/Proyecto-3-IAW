@@ -1,7 +1,7 @@
 Vue.component('Card',{
     template: `
     <div class="card-group col-12 col-sm-12 col-md-6 col-lg-4">
-      <div class="card mt-3" style="width: 20rem; height: 25rem;">
+      <div class="card mt-3" style="height: 25rem;">
         <a @click = "imageSelected = ''; 
             imageSelected = car.imagen; change()"  change data-toggle="modal" data-target="#exampleModal" 
             >
@@ -11,7 +11,6 @@ Vue.component('Card',{
           <p class="white-text">View Image</p>
       </div>
       </div>
-
         </a>
         <div class="card-body">
           <h4 class="card-title">$ {{new Intl.NumberFormat("de-DE").format(car.precio)}}</h4>
